@@ -46,6 +46,10 @@ export const useTeamsQuery = (query: TeamQueryDTO) => {
   });
 };
 
+// ============================================
+// Fetch Team By ID
+// ============================================
+
 export const fetchTeamById = async (
   id: string
 ): Promise<TeamDetailResponseDTO> => {
@@ -64,6 +68,9 @@ export const useTeamDetailQuery = (id: string) => {
   });
 };
 
+// ============================================
+// Fetch Teams By IDs
+// ============================================
 
 export const fetchTeamsBulk = async (
   payload: BulkTeamRequestDTO
@@ -84,6 +91,9 @@ export const useTeamsBulkQuery = (teamIds: string[]) => {
   });
 };
 
+// ============================================
+// Create Team
+// ============================================
 
 export const useCreateTeamMutation = () => {
   const queryClient = useQueryClient();
@@ -108,6 +118,9 @@ export const useCreateTeamMutation = () => {
   });
 };
 
+// ============================================
+// Update Team
+// ============================================
 
 export const useUpdateTeamMutation = () => {
   const queryClient = useQueryClient();
@@ -140,6 +153,10 @@ export const useUpdateTeamMutation = () => {
   });
 };
 
+// ============================================
+// Delete Team
+// ============================================
+
 export const useDeleteTeamMutation = () => {
   const queryClient = useQueryClient();
 
@@ -163,6 +180,10 @@ export const useDeleteTeamMutation = () => {
     },
   });
 };
+
+// ============================================
+// Add Team Member
+// ============================================
 
 export const useAddTeamMemberMutation = () => {
   const queryClient = useQueryClient();
@@ -194,6 +215,9 @@ export const useAddTeamMemberMutation = () => {
   });
 };
 
+// ============================================
+// Remove Team Member
+// ============================================
 
 export const useRemoveTeamMemberMutation = () => {
   const queryClient = useQueryClient();

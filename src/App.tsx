@@ -10,7 +10,7 @@ import { LoginPage } from "./pages/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import { DashboardRouter } from "./pages/DashboardPage";
 import { NotFoundPage } from "./pages/NotfoundPage";
-import { CreateTicket } from "./pages/CreateTicket";
+import TicketPage from "./pages/TicketPage";
 import TicketDetail from "./pages/TicketDetail";
 import { TeamPage } from "./pages/TeamPage";
 
@@ -20,6 +20,10 @@ import UserPage from "./pages/UserPage";
 import CreateUserPage from "./pages/CreateUserPage";
 import CreateTeamPage from "./pages/CreateTeamPage";
 import CreateCategoryPage from "./pages/CreateCategoryPage";
+import UserDetailPage from "./pages/UserDetail";
+import TeamDetailPage from "./pages/TeamDetail";
+import CategoryDetailPage from "./pages/CategoryDetail";
+import CreateTicketPage from "./pages/CreateTicket";
 
 function App() {
   const initializeTheme = useThemeStore(
@@ -41,8 +45,13 @@ function App() {
         <Route element={<DashboardLayout />}>
 
           <Route path="/dashboard" element={<DashboardRouter />} />
-          <Route path="/dashboard/tickets/new" element={<CreateTicket />} />
+          <Route path="/dashboard/tickets" element={<TicketPage />} />
+          <Route path="/dashboard/tickets/new" element={<CreateTicketPage />} />
           <Route path="/dashboard/tickets/:id" element={<TicketDetail />} />
+          <Route path="/dashboard/users/:id" element={<UserDetailPage />} />
+          <Route path="/dashboard/teams/:id" element={<TeamDetailPage />} />
+          <Route path="/dashboard/categories/:id" element={<CategoryDetailPage />} />
+
 
           <Route element={<ProtectedRoute allowedRoles={["ADMIN"]} />}>
             <Route path="/dashboard/teams" element={<TeamPage />} />

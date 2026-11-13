@@ -67,9 +67,8 @@ export const navigationConfig: Record<UserRole, NavigationGroup[]> = {
       label: "Workspace",
       items: [
         { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
-        { title: "My Tickets", url: "/dashboard/tickets/new", icon: Ticket },
-        { title: "Escalated", url: "/dashboard/tickets/escalated", icon: AlertTriangle },
-        { title: "Activity", url: "/dashboard/tickets/activity", icon: Activity },
+        { title: "My Tickets", url: "/dashboard/tickets", icon: Ticket },
+        { title: "New Ticket", url: "/dashboard/tickets/new", icon: Ticket },
         { title: "Notifications", url: "/dashboard/notifications", icon: Bell },
       ],
     },
